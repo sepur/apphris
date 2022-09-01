@@ -22,12 +22,6 @@ class ApiLokerController extends Controller
         $loker = Loker::where('status', 'Aktif')->with('cabang')->get();
 	return new ApiLokerResource(true, 'List Data Loker', $loker);
     }
-    public function index2() #Coba GIT
-    {
-        #$loker = Loker::all();
-        $loker = Loker::where('status', 'Aktif')->with('cabang')->get();
-	return new ApiLokerResource(true, 'List Data Loker', $loker);
-    }
 
     public function show($id_lamar)
     {
